@@ -82,6 +82,13 @@
     color: #8c8c8c;
 }
 
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 125px);
+}
+
 footer {
     background: #1c1c1c;
     color: #fff;
