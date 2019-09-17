@@ -33,9 +33,9 @@ export default class NotificationItems extends Component {
         })
     }
     handleScroll = (e)=>{
-        var test =  +(e.target.scrollHeight - e.target.scrollTop).toString().split('.')[0];
+        var scrollVal =  parseInt(e.target.scrollHeight - e.target.scrollTop);
 
-        if(test === +e.target.clientHeight && this.state.from < this.state.notificationItems.length){
+        if(scrollVal === +e.target.clientHeight && this.state.from < this.state.notificationItems.length){
             this.setState({
                 currentNotification : [...this.state.currentNotification, ...this.state.notificationItems.slice(this.state.from,this.state.from + 10)],
                 from: this.state.from + 10
